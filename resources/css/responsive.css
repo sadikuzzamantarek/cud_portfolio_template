@@ -1,0 +1,79 @@
+@media only screen and (max-width:1024px){
+    .row{
+         margin: 0 15px;
+    }
+
+    .main-nav{
+        display: none;
+    }
+
+    html{
+        font-size: 57.5%;
+    }
+
+    .client-image{
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    .client-review{
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    .client-reviw h3,
+    .client-review .role{
+        text-align: center!important;
+        float: right!important;
+    }
+
+    .sticky{
+        display: none;
+    }
+
+    .mobile-menu span{
+        display: block;
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (max-width:980px){
+    .span_1_of_4{
+        width: 49.2%;
+    }
+
+    .span_1_of_4:nth-child(3){
+        margin-left: 0;
+    }
+    .html{
+        font-size: 62.5%;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .span_1_of_4{
+        width: 49.2%;
+    }
+
+}
+
+@media only screen and (max-width:480px){
+    .team-section h2,
+    .testimonial h2{
+        font-size: 3.3rem;
+    }
+    .sticky{
+        display: block;
+    }
+    
+
+}
+
+@media only screen and (max-width:375px){
+    
+}
+
+
+

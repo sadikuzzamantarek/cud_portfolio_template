@@ -1,0 +1,661 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+/*basic setup*/
+/*===========================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serrif;
+    text-rendering: optimizeLegibility;
+    line-height: 1.3rem;
+    font-size: 1.6rem;
+}
+
+h1 {
+    font-size: 4.2rem;
+    color: white;
+    line-height: 3.5rem;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+.clear-fix::after {
+    content: "";
+    display: table;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+
+}
+
+
+/*============Re-Usable Component===============*/
+.row {
+    max-width: 114rem;
+    margin: 0px auto;
+}
+
+section {
+    padding: 8rem 0;
+
+}
+
+.btn:link,
+.btn:visited,
+.btn {
+    background: tomato;
+    border-bottom: .3rem solid #000;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 6rem;
+    border-radius: 0.3rem;
+    display: inline-block;
+    margin-top: 4.5rem;
+    font-size: 1.6rem;
+    border: none;
+}
+
+.btn:hover {
+    box-shadow: inset 0 0.3rem 0.5rem #393939;
+}
+
+h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    height: 0.4rem;
+    background: #ffffff;
+    width: 8.5rem;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.3s;
+    text-align: center;
+}
+
+h3:hover {
+    color: tomato;
+    cursor: pointer;
+}
+
+h4 {
+    font-size: 1.8rem;
+    color: #393939;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+}
+
+.little-description {
+    font-size: 1.8rem;
+    width: 60%;
+    margin-left: 20%;
+    line-height: 3rem;
+}
+
+.box {
+    padding: 1%;
+}
+
+
+.box p {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-top: 2rem;
+    line-height: 2rem;
+    color: white;
+
+}
+
+/*============Heeader Section===============*/
+
+header {
+    background: linear-gradient(#87509c1e, #87509c), url(img/first-section.png);
+    height: 85vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.logo {
+    height: 3.5rem;
+    width: auto;
+    margin-top: 3.5rem;
+    float: left;
+}
+
+
+
+
+
+
+
+
+/*Sticky Nav*/
+
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #87509cef;
+    padding: 1rem 0;
+    box-shadow: 0 0.2rem .5rem white;
+    z-index: 9999;
+}
+
+.sticky .logo{
+    margin-top: 0rem;
+}
+
+.sticky .main-nav{
+    margin-top: .2rem;
+}
+
+
+.mobile-menu span{
+        color: #ffffff;
+        font-size: 4rem;
+        float: right;
+        margin-top: 1.5rem;
+        display: none;
+        
+}
+
+.mobile-menu span:hover{
+    cursor: pointer;
+}
+
+.mobile-menu .overlay{
+    width: 0rem;
+    height: 100%;
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    background-color: rgba(0, 0, 0, 0.945);
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content{
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.overlay a{
+    display: block;
+    text-decoration: none;
+    font-size: 3rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    line-height: 4rem;
+    padding: 1rem 0;
+}
+
+.overlay a:hover{
+    color: tomato;
+    cursor: pointer;
+}
+
+.close-btn{
+    color: #ffffff;
+    position: absolute;
+    top:2rem;
+    right: 4.5rem;
+    font-size: 6rem;
+}
+/*============Main navigation===============*/
+.main-nav {
+    float: right;
+    margin-top: 3.5rem;
+    text-transform: uppercase;
+
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 1rem;
+
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    color: whitesmoke;
+    text-decoration: none;
+    background: transparent;
+    padding: 0.3rem 1.5rem;
+    border-radius: 0.3rem;
+    transition: 0.3s;
+    display: inline-block;
+    font-size: 1.6rem;
+
+
+}
+
+.main-nav li:first-child {
+    margin-left: 0px;
+}
+
+.main-nav li:hover a:link,
+.main-nav li:hover a:visited {
+    background: #643a79;
+}
+
+.active {
+    background: #643a79;
+    border-radius: 0.3rem;
+}
+
+.hero-text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2rem;
+}
+
+.btn-hero:link,
+.btn-hero:visited {
+    background: #eb7d4b;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-hero:hover:link,
+.btn-hero:hover:visited {
+    background: #cc6b3e;
+
+
+}
+
+
+/*============Services Section===============*/
+.services-section {
+    color: white;
+    text-align: center;
+    background: linear-gradient(#17c2a34b, #17c2a3c0), url(img/services-setion.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.services-icon {
+    height: 12rem;
+    margin-top: 4.5rem;
+    margin-bottom: 3.5rem;
+
+}
+
+
+/*============Team Section===============*/
+
+
+.team-section {
+    background: linear-gradient(#c4def052, #c4def0), url(img/team-section.png);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.team-section h2 {
+    color: black;
+}
+
+.team-section h2::after {
+    background: black;
+}
+
+.team-member {
+    margin-top: 4.5rem;
+    margin-bottom: 3.5rem;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+}
+
+.team-section h3 {
+    color: black;
+}
+
+.team-section h3:hover {
+    color: tomato;
+}
+
+.role {
+    color: #052b46;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    margin-top: 2rem;
+    display: inline-block;
+}
+
+.team-section .box p {
+    color: black;
+}
+
+.social-link {
+    margin-top: 4.5rem;
+
+}
+
+.social-link ul li {
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+
+.social-link ul li a i {
+    color: #ffffff;
+}
+
+.social-link ul li a:link i::before {
+    background: #bdd1df;
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 1rem;
+    transition: 0.5s;
+}
+
+.social-link ul li a:hover i::before {
+    background: #393939;
+    transform: rotate(360deg);
+}
+
+
+/*============SKills Section===============*/
+
+.skill-section {
+    background: url(img/skills-section.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+.skill-section h2,
+.skill-section h3 {
+    color: #17496b;
+}
+
+.skill-section h2::after {
+    background: #17496b;
+}
+
+.skill-section .box {
+    margin-top: 4.5rem;
+}
+
+
+.col svg.radial-progress circle {
+    stroke-width: 5;
+}
+
+.col svg.radial-progress text {
+    fill: black;
+    font-size: 1.5rem;
+}
+
+svg.web-design circle {
+    stroke: #30bae7 !important;
+}
+
+svg.html-css circle {
+    stroke: #d74680 !important;
+}
+
+svg.graphics-design circle {
+    stroke: #15c7a8 !important;
+}
+
+svg.digital-marketing circle {
+    stroke: #eb7d4b !important;
+}
+
+
+/*============Portfolio Section===============*/
+
+.portfolio-section {
+    background: #ffdd99;
+    text-align: center;
+}
+
+.portfolio-section h2 {
+    color: #393939;
+}
+
+.portfolio-section h2::after {
+    background: #e5c37f;
+}
+
+.portfolio-filter {
+    margin: 4.5rem 0;
+}
+
+.portfolio-filter button {
+    background: #ebc985;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    color: #393939;
+    margin: 0 0.5rem;
+    transition: 0.5s;
+}
+
+.portfolio-filter button:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0.3rem 0.5rem #393939;
+}
+
+.portfolio-image {
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-section .col:nth-child(3) {
+    margin-left: 0rem;
+}
+
+.portfolio-section h4 {
+    color: #393939;
+    font-size: 1.8rem;
+}
+
+.btn-load-more {
+    background: #17c2a4 !important;
+    border: none !important;
+}
+
+
+/*============Testimonial Section===============*/
+
+.testimonial {
+    background: linear-gradient(#d746806e, #d74680), url(img/testimonial-section.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.testimonial .little-description {
+    text-align: center !important;
+    color: white;
+}
+
+.testimonial h2::after {
+    background: #b73c6d;
+}
+
+.testimonial .col:nth-child(3) {
+    margin-left: 0;
+}
+
+.testimonial .col:nth-child(1),
+.testimonial .col:nth-child(2) {
+    margin-top: 4rem;
+}
+
+.testimonial .col:nth-child(3),
+.testimonial .col:nth-child(4) {
+    margin-top: 8rem;
+}
+
+.client-image {
+    width: 10rem;
+    float: left;
+}
+
+
+
+.client-image img {
+    height: 8rem;
+    border-radius: 50%;
+    margin-bottom: 3rem;
+}
+
+.client-review {
+    width: 35rem;
+    float: left;
+}
+
+.client-review p {
+    font-size: 2.1rem;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.client-review h3 {
+    display: block !important;
+    float: left;
+}
+
+.client-review .role {
+    color: #ffdd99 !important;
+    display: block !important;
+    float: left;
+    position: absolute;
+    margin-top: 2.5rem;
+}
+
+/*============Contact Section===============*/
+
+.contact-section {
+    background: #3c5499;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+.contact-section p {
+    color: white;
+}
+
+.contact-section h2::after {
+    background: #273a71;
+}
+
+.contact-section form {
+    margin-top: 5rem;
+
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+    background: #273a71;
+    border: 0.1rem solid #273a71;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+    color: white;
+}
+
+/*Footer Section*/
+
+footer{
+    background: #344b8e;
+    text-align: center;
+    color: white;
+    padding: 3rem 0;
+    border-top: 0.3rem px solid black;
+}
+
+footer li{
+    display: inline-block;
+    margin: 0 2rem;
+    
+}
+footer li a{
+    color: white;
+}
+
+
+footer li a:link i::before{
+    background: #bdd1df;
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 1rem;
+    transition: 0.5s;
+    color: white;
+}
+
+footer li a:hover i::before{
+    background: #393939;
+    transform: rotate(360deg);
+}
+
+footer h4{
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+footer h4:hover{
+    color: tomato;
+    cursor: pointer;
+}
